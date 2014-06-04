@@ -1,0 +1,21 @@
+#MyEclipse Hibernate Properties
+#Wed Jun 04 08:28:27 CEST 2014
+genBasicCompId=true
+sessionFactoryName=hibernate.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=true
+reSettingsFile=
+configFile=/test/src/hibernate.cfg.xml
+createConfigFile=true
+baseDaoClass=hibernate.BaseHibernateDAO
