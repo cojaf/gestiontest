@@ -24,6 +24,7 @@
 	<mapping class="pojo.Membre" />
 	<mapping class="pojo.Pays" />
 	<mapping class="pojo.Personne" />
+	<mapping class="pojo.Salle" />
 
 </session-factory>
 

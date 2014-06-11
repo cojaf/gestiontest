@@ -31,6 +31,7 @@ public class Adresse implements java.io.Serializable {
 	private String ville;
 	private String codePostal;
 	private Set<Membre> membres = new HashSet<Membre>(0);
+	private Set<Salle> salles = new HashSet<Salle>(0);
 
 	// Constructors
 
@@ -48,7 +49,8 @@ public class Adresse implements java.io.Serializable {
 
 	/** full constructor */
 	public Adresse(Pays pays, String rue, String numero, String boite,
-			String ville, String codePostal, Set<Membre> membres) {
+			String ville, String codePostal, Set<Membre> membres,
+			Set<Salle> salles) {
 		this.pays = pays;
 		this.rue = rue;
 		this.numero = numero;
@@ -56,6 +58,7 @@ public class Adresse implements java.io.Serializable {
 		this.ville = ville;
 		this.codePostal = codePostal;
 		this.membres = membres;
+		this.salles = salles;
 	}
 
 	// Property accessors
@@ -132,6 +135,15 @@ public class Adresse implements java.io.Serializable {
 
 	public void setMembres(Set<Membre> membres) {
 		this.membres = membres;
+	}
+
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "adresse")
+	public Set<Salle> getSalles() {
+		return this.salles;
+	}
+
+	public void setSalles(Set<Salle> salles) {
+		this.salles = salles;
 	}
 
 }
